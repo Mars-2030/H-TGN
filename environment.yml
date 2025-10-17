@@ -1,0 +1,35 @@
+name: temporal-coarsening
+channels:
+  - pytorch
+  - nvidia # For cudatoolkit
+  - conda-forge
+  - defaults
+dependencies:
+  # Core requirements
+  - python=3.11
+  - pip
+
+  # Deep Learning Libraries (let conda handle the specific build)
+  - pytorch
+  - torchvision
+  - torchaudio
+  - cudatoolkit=11.3 # Specify the major CUDA version you developed with
+
+  # Data Science and Plotting
+  - numpy
+  - pandas
+  - scikit-learn
+  - networkx
+  - matplotlib
+  - plotly
+  - tqdm
+
+  # Pip-installed packages for PyG and visualizations
+  # These are often best installed via pip to match PyTorch/CUDA versions correctly
+  - pip:
+    - torch-scatter
+    - torch-sparse
+    - torch-cluster
+    - torch-spline-conv
+    - torch-geometric
+    - opentsne
